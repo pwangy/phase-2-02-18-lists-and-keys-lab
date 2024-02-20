@@ -4,9 +4,12 @@ const ProjectItem = ({ name, about, technologies }) => {
 			<h3>{name}</h3>
 			<p>{about}</p>
 			<div className='technologies'>
-				{/* render a <span> for each technology in the technologies array */}
+				{technologies.map(
+          t => <span key={t}>{t}</span>
+				)}
 			</div>
 		</div>
-)}
+	)
+}
 
 export default ProjectItem
